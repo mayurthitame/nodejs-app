@@ -67,6 +67,7 @@ pipeline {
     post {
         always {
             sendEmail(currentBuild.currentResult,"mayurthitame@gmail.com")
+            sendSlack(currentBuild.currentResult,"#nodejs-app"))
             cleanWs()
         }    
     }
