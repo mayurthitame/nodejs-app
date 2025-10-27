@@ -13,7 +13,7 @@ pipeline {
     }
 
     tools {
-        nodejs 'Node-20.19.5' // Ensure this matches the name of the NodeJS installation in Jenkins
+        nodejs 'Node-20' // Ensure this matches the name of the NodeJS installation in Jenkins
     }
 
     environment {
@@ -66,7 +66,7 @@ pipeline {
 
     post {
         always {
-            sendEmail(currentBuild.currentResult,"balajireddy.urs@gmail.com")
+            sendEmail(currentBuild.currentResult,"mayurthitame@gmail.com")
             cleanWs()
         }    
     }
